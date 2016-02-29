@@ -8,8 +8,20 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mTextLabel: UILabel!
+    @IBOutlet weak var editTextField: UITextField!
+    
+    @IBAction func goToStatistics(sender: AnyObject) {
+        showToastView()
+        goToCustomTableViewScreen()
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +31,91 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    internal func showToastView() {
+        JLToast.makeText("Hello World").show()
+    }
+    
+    
+    
+    
+    @IBAction func buttonPressed(sender: UIButton) {
+        let buttonTitle = sender.titleForState(.Normal)!
+        mTextLabel.text = "clicked on \(buttonTitle)";
+        
+        performSegueWithIdentifier("Screen3", sender: nil)
+        
+        // hide keyboard by resigning first responder
+        self.editTextField.resignFirstResponder();
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Screen3"{
+            
+            let mViewConroller = segue.destinationViewController as? ThirdViewController
+            mViewConroller?.textVal = "Working bro"
+        }
+        
+        if segue.identifier == "customTable"{
+            
+          //  let mViewConroller = segue.destinationViewController as? CustomTableViewController
+            //mViewConroller?.textVal = "Working bro"
+            
+        }
+        
+    }
 
+    
+    func goToCustomTableViewScreen(){
+        performSegueWithIdentifier("customTable", sender: nil)
+    }
+    
+    
+    
+    
+    @IBAction func onButtonClicked(sender : UIButton){
+        let buttonTitle = sender.titleForState(.Normal)!
+        mTextLabel.text = "clicked on \(buttonTitle)";
+        showAlert("clicked button 2", mMessage: "message goes here")
+       // goToCustomTableViewScreen()
+        
+        
+        // hide keyboard by resigning first responder
+        self.editTextField.resignFirstResponder();
+        
+//        // create the alert
+//        let alert = UIAlertController(title: "UIAlertController", message: "Would you like to continue learning how to use iOS alerts?", preferredStyle: UIAlertControllerStyle.Alert)
+//        
+//        // add the actions (buttons)
+//        alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
+//        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+//        
+//        // show the alert
+//        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    // Called whenever user clicks outside on main view
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // hide keyboard by resigning all editing
+        self.view.endEditing(true);
+    }
+    
+    func showAlert(mTitle:String, mMessage:String){
+        //        // create the alert
+                let alert = UIAlertController(title: mTitle, message: mMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+                // add the actions (buttons)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        
+                // show the alert
+                self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
 
 }
+
+
 
