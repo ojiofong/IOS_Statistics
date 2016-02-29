@@ -12,6 +12,9 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var mTableView: UITableView!
     
+    var arrDict : NSMutableArray=[]
+    var jsonArray = [];
+    
     var popularPlaces = [
         ("Statistics", "aroundalogo.png"),
         ("Mean", "ic_place_car.png"),
@@ -28,6 +31,7 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         sortTuple()
+        jsonParsingFromFile()
         
         // mTableView.estimatedRowHeight = 70.0
         // mTableView.rowHeight = UITableViewAutomaticDimension
@@ -45,7 +49,7 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     // no. of rows
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return popularPlaces.count;
+        return jsonArray.count;
     }
     
     // cell for row
@@ -58,11 +62,13 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
         // get cast of custom cell
         if let iconCell = cell as? IconTableViewCell{
             
-            let (placeName, iconName) = popularPlaces[indexPath.row];
+        //    let (placeName, iconName) = popularPlaces[indexPath.row];
+            let strTitle : String = arrDict[indexPath.row].valueForKey("TITLE") as! String
             
-            iconCell.titleLabel?.text = placeName
+            iconCell.titleLabel?.text = strTitle
+           // iconCell.titleLabel?.text = placeName
             //iconCell.imageView?.image = UIImage(named: iconName)
-            iconCell.iconImageView.image = UIImage(named: iconName)
+           // iconCell.iconImageView.image = UIImage(named: iconName)
         }
         
         // used to show the full cell dividers
@@ -100,6 +106,33 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     func setViewControllerTitle( mTitle : String){
         self.title = mTitle
+    }
+    
+    func jsonParsingFromFile(){
+        let filePath : String = NSBundle.mainBundle().pathForResource("days", ofType: "json")!
+        let data : NSData = try! NSData(contentsOfFile: filePath as String, options: NSDataReadingOptions.DataReadingMapped)
+        getDataContents(data)
+        
+    }
+    
+    func getDataContents(mData : NSData){
+        let str = String(data: mData, encoding: NSASCIIStringEncoding)
+        print(str)
+        
+        // init dictionary
+        let dict : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(mData, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
+        
+         jsonArray = dict.valueForKey("ITEMS") as! NSArray
+        
+        print(jsonArray.count)
+        let ss = "item count \(jsonArray.count)"
+        JLToast.makeText(ss).show()
+        
+        for (var i = 0; i < jsonArray.count; i++) {
+            
+            arrDict.addObject(jsonArray.objectAtIndex(i))
+        }
+        
     }
     
     
