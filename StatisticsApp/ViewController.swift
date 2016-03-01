@@ -55,12 +55,12 @@ class ViewController: UIViewController {
         if segue.identifier == "Screen3"{
             
             let mViewConroller = segue.destinationViewController as? ThirdViewController
-            mViewConroller?.textVal = "Working bro"
+            mViewConroller?.textTitle = "Working bro"
         }
         
         if segue.identifier == "customTable"{
             
-          //  let mViewConroller = segue.destinationViewController as? CustomTableViewController
+          //  let mViewConroller = segue.destinationViewController as? MainViewController
             //mViewConroller?.textVal = "Working bro"
             
         }

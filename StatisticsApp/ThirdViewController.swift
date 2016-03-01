@@ -10,16 +10,31 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
-    var textVal = "Default text value"
-    @IBOutlet weak var label: UILabel!
+    var textTitle = "Default text value"
+    var textDescription = "Default text value"
+    var textExample = "Default text value"
+    
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var labelExample: UILabel!
     
     override func viewWillAppear(animated: Bool) {
-        label.text = textVal
+        initViews()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = textVal
+        self.title = textTitle
+        initViews()
     }
 
+    @IBAction func onClickButtonTestMyKnowledge(sender: AnyObject) {
+        JLToast.makeText("Test my knowledge").show()
+    }
+    
+    func initViews(){
+        labelTitle.text = textTitle
+        labelDescription.text = textDescription
+        labelExample.text = textExample
+    }
 }

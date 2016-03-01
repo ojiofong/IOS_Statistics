@@ -8,12 +8,15 @@
 
 import UIKit
 
-class CustomTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var mTableView: UITableView!
     
     var arrDict : NSMutableArray=[]
     var jsonArray = [];
+    var titleToDisplay = "";
+    var descriptionToDisplay = "";
+    var exampleToDisplay = "";
     
     var popularPlaces = [
         ("Statistics", "aroundalogo.png"),
@@ -62,13 +65,13 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
         // get cast of custom cell
         if let iconCell = cell as? IconTableViewCell{
             
-        //    let (placeName, iconName) = popularPlaces[indexPath.row];
+            //    let (placeName, iconName) = popularPlaces[indexPath.row];
             let strTitle : String = arrDict[indexPath.row].valueForKey("TITLE") as! String
             
             iconCell.titleLabel?.text = strTitle
-           // iconCell.titleLabel?.text = placeName
+            // iconCell.titleLabel?.text = placeName
             //iconCell.imageView?.image = UIImage(named: iconName)
-           // iconCell.iconImageView.image = UIImage(named: iconName)
+            // iconCell.iconImageView.image = UIImage(named: iconName)
         }
         
         // used to show the full cell dividers
@@ -86,21 +89,29 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // deselect the selection
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! IconTableViewCell
-        let text =  cell.titleLabel?.text
-        goToDetailScreen(text!)
+        //  let cell = tableView.cellForRowAtIndexPath(indexPath) as! IconTableViewCell
+        //   let text =  cell.titleLabel?.text
+        
+        titleToDisplay = arrDict[indexPath.row].valueForKey("TITLE") as! String
+        descriptionToDisplay = arrDict[indexPath.row].valueForKey("DETAILS") as! String
+        exampleToDisplay = arrDict[indexPath.row].valueForKey("EXAMPLE") as! String
+        
+        goToDetailScreen(titleToDisplay)
         mTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "statsDetail"{
             let statsDetailController = segue.destinationViewController as? ThirdViewController
-            statsDetailController?.textVal = sender as! String
+            statsDetailController?.textTitle = titleToDisplay
+            statsDetailController?.textDescription = descriptionToDisplay
+            statsDetailController?.textExample = exampleToDisplay
         }
     }
     
     func goToDetailScreen(str : String){
         setViewControllerTitle("Back") // Alter the text in the next screen's back button
+        
         performSegueWithIdentifier("statsDetail", sender: str)
     }
     
@@ -122,7 +133,7 @@ class CustomTableViewController: UIViewController, UITableViewDataSource, UITabl
         // init dictionary
         let dict : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(mData, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
         
-         jsonArray = dict.valueForKey("ITEMS") as! NSArray
+        jsonArray = dict.valueForKey("ITEMS") as! NSArray
         
         print(jsonArray.count)
         let ss = "item count \(jsonArray.count)"

@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1251.5" y="355.5"/>
         </scene>
-        <!--Custom Table View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ruP-ck-hvc">
             <objects>
-                <viewController id="hDL-IO-bor" customClass="CustomTableViewController" customModule="StatisticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hDL-IO-bor" customClass="MainViewController" customModule="StatisticsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rhB-t8-Bdh"/>
                         <viewControllerLayoutGuide type="bottom" id="ajT-1w-lQo"/>
@@ -234,8 +234,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkG-2M-gcc">
-                                <rect key="frame" x="59" y="115" width="171" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkG-2M-gcc">
+                                <rect key="frame" x="102" y="113" width="171" height="51"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" red="0.28944275393070573" green="0.19077237500531197" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description goes here on this line until it overflows" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-y1-skQ">
+                                <rect key="frame" x="20" y="201" width="335" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-Sh-WVL">
+                                <rect key="frame" x="120" y="407" width="134" height="42"/>
+                                <state key="normal" title="Test my Knowledge"/>
+                                <connections>
+                                    <action selector="onClickButtonTestMyKnowledge:" destination="288-Dg-Lw8" eventType="touchUpInside" id="1qx-1z-T9v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Example goes here on this line until it overflows" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imd-AN-Hpp">
+                                <rect key="frame" x="20" y="268" width="335" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -246,7 +265,9 @@
                     <navigationItem key="navigationItem" id="ED0-eR-6lN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="label" destination="wkG-2M-gcc" id="dtD-zl-VJP"/>
+                        <outlet property="labelDescription" destination="5DW-y1-skQ" id="sqx-t1-E9X"/>
+                        <outlet property="labelExample" destination="Imd-AN-Hpp" id="AmW-FG-X5e"/>
+                        <outlet property="labelTitle" destination="wkG-2M-gcc" id="rdd-5g-cjX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9D-Tg-2Z4" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -103,7 +103,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "screen3Detail"{
             let screen3VController = segue.destinationViewController as? ThirdViewController
-            screen3VController?.textVal = sender as! String
+            screen3VController?.textTitle = sender as! String
             
         }
     }
