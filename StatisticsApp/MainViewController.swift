@@ -120,24 +120,23 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func jsonParsingFromFile(){
-        let filePath : String = NSBundle.mainBundle().pathForResource("days", ofType: "json")!
+        let filePath : String = NSBundle.mainBundle().pathForResource("stats", ofType: "json")!
         let data : NSData = try! NSData(contentsOfFile: filePath as String, options: NSDataReadingOptions.DataReadingMapped)
         getDataContents(data)
         
     }
     
     func getDataContents(mData : NSData){
-        let str = String(data: mData, encoding: NSASCIIStringEncoding)
-        print(str)
+//        let str = String(data: mData, encoding: NSASCIIStringEncoding)
+//        print(str)
         
         // init dictionary
         let dict : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(mData, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
         
         jsonArray = dict.valueForKey("ITEMS") as! NSArray
         
-        print(jsonArray.count)
-        let ss = "item count \(jsonArray.count)"
-        JLToast.makeText(ss).show()
+//        let ss = "item count \(jsonArray.count)"
+//        JLToast.makeText(ss).show()
         
         for (var i = 0; i < jsonArray.count; i++) {
             
