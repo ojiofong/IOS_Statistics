@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3747A6741C83BB8800BDD114 /* stats.json in Resources */ = {isa = PBXBuildFile; fileRef = 3747A6731C83BB8800BDD114 /* stats.json */; };
 		3747A6771C83C06A00BDD114 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3747A6761C83C06A00BDD114 /* .gitignore */; };
+		3747A6841C85478100BDD114 /* stats.json in Resources */ = {isa = PBXBuildFile; fileRef = 3747A6831C85478100BDD114 /* stats.json */; };
 		376064F91C6E45E800EF1A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376064F81C6E45E800EF1A31 /* AppDelegate.swift */; };
 		376064FB1C6E45E800EF1A31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376064FA1C6E45E800EF1A31 /* ViewController.swift */; };
 		376064FE1C6E45E800EF1A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376064FC1C6E45E800EF1A31 /* Main.storyboard */; };
@@ -26,8 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3747A6731C83BB8800BDD114 /* stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stats.json; path = ../../Documents/stats.json; sourceTree = "<group>"; };
 		3747A6761C83C06A00BDD114 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3747A6831C85478100BDD114 /* stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stats.json; sourceTree = "<group>"; };
 		376064F51C6E45E800EF1A31 /* StatisticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatisticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376064F81C6E45E800EF1A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376064FA1C6E45E800EF1A31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		3747A6751C83BB9500BDD114 /* Raw */ = {
 			isa = PBXGroup;
 			children = (
-				3747A6731C83BB8800BDD114 /* stats.json */,
+				3747A6831C85478100BDD114 /* stats.json */,
 			);
 			name = Raw;
 			path = ..;
@@ -209,7 +209,7 @@
 				3747A6771C83C06A00BDD114 /* .gitignore in Resources */,
 				376065031C6E45E800EF1A31 /* LaunchScreen.storyboard in Resources */,
 				376065001C6E45E800EF1A31 /* Assets.xcassets in Resources */,
-				3747A6741C83BB8800BDD114 /* stats.json in Resources */,
+				3747A6841C85478100BDD114 /* stats.json in Resources */,
 				376064FE1C6E45E800EF1A31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

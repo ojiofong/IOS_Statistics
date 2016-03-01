@@ -1,0 +1,36 @@
+{
+    "ITEMS": [
+              {
+              "TITLE": "Average",
+              "EXAMPLE": "The average of the following three numbers [2,4,6] is (2 + 4 + 6)/3 = 12/3 = 4",
+              "DETAILS": "The sum of a list of numbers divided by the number of numbers"
+              },
+              
+              
+              {
+              "TITLE": "Median",
+              "EXAMPLE": "For e.g. To find the Median of the list of numbers [11,2,5]. Arrange them in order [2,5,11]. The middle is 5 which is the median ",
+              "DETAILS": "Median is the \"middle\" of list of numbers arranged in \"order\" "
+              },
+              
+              
+              {
+              "TITLE": "Mean",
+              "EXAMPLE": "The mean or average of the following three numbers [2,4,6] is (2 + 4 + 6)/3 = 12/3 = 4",
+              "DETAILS": "Mean is synonymous to Average which is the sum of a list of numbers divided by the number of numbers"
+              },
+              
+              
+              {
+              "TITLE": "Mode",
+              "EXAMPLE": "For e.g. The mode of the following numbers [2,4,2,6,4,2] is 2 because 2 appears more often than any other number in the list",
+              "DETAILS": "The value that appears most often in a list of data"
+              },
+              
+              {
+              "TITLE": "Statistics",
+              "EXAMPLE": "For e.g. Mean, Median, Mode etc. are part of statistics because they help us understand data better",
+              "DETAILS": "Statistics is how we analyze, present and organize data. It helps us understand data better"
+              }
+            ]
+}
