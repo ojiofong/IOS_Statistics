@@ -135,9 +135,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         jsonArray = dict.valueForKey("ITEMS") as! NSArray
         
-//        let ss = "item count \(jsonArray.count)"
-//        JLToast.makeText(ss).show()
-        
         for (var i = 0; i < jsonArray.count; i++) {
             
             arrDict.addObject(jsonArray.objectAtIndex(i))
