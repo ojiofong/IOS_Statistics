@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Screen3"{
             
-            let mViewConroller = segue.destinationViewController as? ThirdViewController
+            let mViewConroller = segue.destinationViewController as? StatsDetailController
             mViewConroller?.textTitle = "Working bro"
         }
         

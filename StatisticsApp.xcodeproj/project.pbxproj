@@ -14,7 +14,7 @@
 		376064FE1C6E45E800EF1A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376064FC1C6E45E800EF1A31 /* Main.storyboard */; };
 		376065001C6E45E800EF1A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376064FF1C6E45E800EF1A31 /* Assets.xcassets */; };
 		376065031C6E45E800EF1A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376065011C6E45E800EF1A31 /* LaunchScreen.storyboard */; };
-		3790667A1C7EBF48006C68EB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379066791C7EBF48006C68EB /* ThirdViewController.swift */; };
+		3790667A1C7EBF48006C68EB /* StatsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379066791C7EBF48006C68EB /* StatsDetailController.swift */; };
 		3790667F1C7EBF9E006C68EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790667B1C7EBF9E006C68EB /* MainViewController.swift */; };
 		379066801C7EBF9E006C68EB /* IconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790667C1C7EBF9E006C68EB /* IconTableViewCell.swift */; };
 		379066811C7EBF9E006C68EB /* MContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790667D1C7EBF9E006C68EB /* MContent.swift */; };
@@ -35,7 +35,7 @@
 		376064FF1C6E45E800EF1A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		376065021C6E45E800EF1A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		376065041C6E45E800EF1A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		379066791C7EBF48006C68EB /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		379066791C7EBF48006C68EB /* StatsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsDetailController.swift; sourceTree = "<group>"; };
 		3790667B1C7EBF9E006C68EB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3790667C1C7EBF9E006C68EB /* IconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconTableViewCell.swift; path = ../IconTableViewCell.swift; sourceTree = "<group>"; };
 		3790667D1C7EBF9E006C68EB /* MContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MContent.swift; sourceTree = "<group>"; };
@@ -83,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				3790667C1C7EBF9E006C68EB /* IconTableViewCell.swift */,
-				376064FC1C6E45E800EF1A31 /* Main.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -115,6 +114,7 @@
 				3747A6751C83BB9500BDD114 /* Raw */,
 				376064F81C6E45E800EF1A31 /* AppDelegate.swift */,
 				376064FF1C6E45E800EF1A31 /* Assets.xcassets */,
+				376064FC1C6E45E800EF1A31 /* Main.storyboard */,
 				376065011C6E45E800EF1A31 /* LaunchScreen.storyboard */,
 				376065041C6E45E800EF1A31 /* Info.plist */,
 			);
@@ -134,7 +134,7 @@
 			children = (
 				376064FA1C6E45E800EF1A31 /* ViewController.swift */,
 				3790667E1C7EBF9E006C68EB /* SecondViewController.swift */,
-				379066791C7EBF48006C68EB /* ThirdViewController.swift */,
+				379066791C7EBF48006C68EB /* StatsDetailController.swift */,
 				3790667B1C7EBF9E006C68EB /* MainViewController.swift */,
 			);
 			name = Controller;
@@ -229,7 +229,7 @@
 				376064FB1C6E45E800EF1A31 /* ViewController.swift in Sources */,
 				379066901C7EC18A006C68EB /* JLToastWindow.swift in Sources */,
 				379066821C7EBF9E006C68EB /* SecondViewController.swift in Sources */,
-				3790667A1C7EBF48006C68EB /* ThirdViewController.swift in Sources */,
+				3790667A1C7EBF48006C68EB /* StatsDetailController.swift in Sources */,
 				376064F91C6E45E800EF1A31 /* AppDelegate.swift in Sources */,
 				3790668E1C7EC18A006C68EB /* JLToastCenter.swift in Sources */,
 			);
@@ -244,7 +244,6 @@
 				376064FD1C6E45E800EF1A31 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		376065011C6E45E800EF1A31 /* LaunchScreen.storyboard */ = {

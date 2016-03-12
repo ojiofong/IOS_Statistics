@@ -102,7 +102,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "statsDetail"{
-            let statsDetailController = segue.destinationViewController as? ThirdViewController
+            let statsDetailController = segue.destinationViewController as? StatsDetailController
             statsDetailController?.textTitle = titleToDisplay
             statsDetailController?.textDescription = descriptionToDisplay
             statsDetailController?.textExample = exampleToDisplay
@@ -111,7 +111,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func goToDetailScreen(str : String){
         setViewControllerTitle("Back") // Alter the text in the next screen's back button
-        
         performSegueWithIdentifier("statsDetail", sender: str)
     }
     

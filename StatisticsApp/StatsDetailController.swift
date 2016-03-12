@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class StatsDetailController: UIViewController {
     
     var textTitle = "Default text value"
     var textDescription = "Default text value"
