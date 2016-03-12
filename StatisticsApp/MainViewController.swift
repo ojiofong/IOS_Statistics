@@ -68,7 +68,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //    let (placeName, iconName) = popularPlaces[indexPath.row];
             let strTitle : String = arrDict[indexPath.row].valueForKey("TITLE") as! String
             
-            iconCell.titleLabel?.text = strTitle
+            iconCell.titleLabel?.text = "" // custom cell label - set empty to hide default text
+            iconCell.textLabel?.text = strTitle // system cell label
             // iconCell.titleLabel?.text = placeName
             //iconCell.imageView?.image = UIImage(named: iconName)
             // iconCell.iconImageView.image = UIImage(named: iconName)
