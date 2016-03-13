@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373A17AA1C95E851004175F2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A17A91C95E851004175F2 /* Utils.swift */; };
+		373A17AD1C95F606004175F2 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A17AC1C95F606004175F2 /* test.swift */; };
 		3747A6771C83C06A00BDD114 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3747A6761C83C06A00BDD114 /* .gitignore */; };
 		3747A6841C85478100BDD114 /* stats.json in Resources */ = {isa = PBXBuildFile; fileRef = 3747A6831C85478100BDD114 /* stats.json */; };
 		3751B5D81C94E3ED006AF175 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3751B5BD1C94E3ED006AF175 /* Info.plist */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		373A17A91C95E851004175F2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		373A17AC1C95F606004175F2 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		3747A6761C83C06A00BDD114 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3747A6831C85478100BDD114 /* stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stats.json; sourceTree = "<group>"; };
 		3751B5BD1C94E3ED006AF175 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +121,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		373A17AB1C95F606004175F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3790667C1C7EBF9E006C68EB /* IconTableViewCell.swift */,
+				373A17AC1C95F606004175F2 /* test.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3747A6721C7EC31500BDD114 /* JLToast */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,14 +149,6 @@
 			);
 			name = Raw;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		3747A6821C852AC400BDD114 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				3790667C1C7EBF9E006C68EB /* IconTableViewCell.swift */,
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		3751B5BC1C94E3ED006AF175 /* MZFormSheetPresentationController */ = {
@@ -206,8 +209,8 @@
 		376064F71C6E45E800EF1A31 /* StatisticsApp */ = {
 			isa = PBXGroup;
 			children = (
+				373A17AB1C95F606004175F2 /* View */,
 				373A17A81C95E851004175F2 /* Utils */,
-				3747A6821C852AC400BDD114 /* view */,
 				379066861C7EC116006C68EB /* Controller */,
 				379066841C7EC107006C68EB /* Model */,
 				379066871C7EC159006C68EB /* Libs */,
@@ -398,6 +401,7 @@
 				3751B5D91C94E3ED006AF175 /* MZBlurEffectAdapter.m in Sources */,
 				379066801C7EBF9E006C68EB /* IconTableViewCell.swift in Sources */,
 				3751B5DD1C94E3ED006AF175 /* MZFormSheetPresentationViewController.m in Sources */,
+				373A17AD1C95F606004175F2 /* test.swift in Sources */,
 				3751B5E11C94E3ED006AF175 /* MZMethodSwizzler.m in Sources */,
 				3751B5DC1C94E3ED006AF175 /* MZFormSheetPresentationController.m in Sources */,
 				373A17AA1C95E851004175F2 /* Utils.swift in Sources */,
