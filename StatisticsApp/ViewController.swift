@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import SigmaSwiftStatistics
+//import SigmaSwiftStatistics
+import MZAppearance
+
 
 
 
@@ -20,12 +22,16 @@ class ViewController: UIViewController {
         showToastView()
         goToCustomTableViewScreen()
         
+        
+        
     }
     
     
     override func viewWillAppear(animated: Bool) {
-        let s : String = "yes sir \(Sigma.median([3,2,1,4,5]))"
-        print(s)
+//        let i : Int = Int(Sigma.median([3,2,1,4,5])!)
+//        let s : String = "yes sir \(i)"
+//        print(s)
+    
     }
     
     
@@ -34,13 +40,12 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
     @IBAction func buttonPressed(sender: UIButton) {
         let buttonTitle = sender.titleForState(.Normal)!
         mTextLabel.text = "clicked on \(buttonTitle)";
         
-        performSegueWithIdentifier("Screen3", sender: nil)
+        
+        //performSegueWithIdentifier("Screen3", sender: nil)
         
         // hide keyboard by resigning first responder
         self.editTextField.resignFirstResponder();
