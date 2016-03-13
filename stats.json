@@ -8,6 +8,20 @@
               
               
               {
+              "TITLE": "Max",
+              "EXAMPLE": "For e.g. To find the Max of the list of numbers [11,2,15,7]. The Max is 15 because it is the biggest number or has the biggest value in the list ",
+              "DETAILS": "Max is the \"biggest or maximum\" value in a list"
+              },
+              
+              
+              {
+              "TITLE": "Min",
+              "EXAMPLE": "For e.g. To find the Min of the list of numbers [11,2,15,7]. The Min is 2 because it is the smallest number or has the lowest value in the list ",
+              "DETAILS": "Min is the \"smallest or minimum\" value in a list"
+              },
+              
+              
+              {
               "TITLE": "Median",
               "EXAMPLE": "For e.g. To find the Median of the list of numbers [11,2,5]. Arrange them in order [2,5,11]. The middle is 5 which is the median ",
               "DETAILS": "Median is the \"middle\" of list of numbers arranged in \"order\" "

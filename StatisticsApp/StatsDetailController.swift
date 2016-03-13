@@ -47,6 +47,10 @@ class StatsDetailController: UIViewController {
         formSheetController.presentationController?.shouldCenterVertically = true
         formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
         
+        // Pass data
+        let presentedViewController = navigationController.viewControllers.first as! QuizController
+        presentedViewController.textTitle = self.textTitle
+        
         self.presentViewController(formSheetController, animated: true, completion: nil)
     }
 }
