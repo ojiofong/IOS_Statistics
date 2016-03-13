@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(sender: UIButton) {
         let buttonTitle = sender.titleForState(.Normal)!
         mTextLabel.text = "clicked on \(buttonTitle)";
+        showMZFormSheet()
         
         
         //performSegueWithIdentifier("Screen3", sender: nil)
@@ -113,6 +114,14 @@ class ViewController: UIViewController {
         
                 // show the alert
                 self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func showMZFormSheet(){
+        let navigationController = self.storyboard!.instantiateViewControllerWithIdentifier("navconid") as! UINavigationController
+        let formSheetController = MZFormSheetPresentationViewController(contentViewController: navigationController)
+        formSheetController.presentationController?.contentViewSize = CGSizeMake(250, 250)
+        
+        self.presentViewController(formSheetController, animated: true, completion: nil)
     }
     
 

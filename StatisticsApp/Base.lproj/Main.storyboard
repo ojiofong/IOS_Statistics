@@ -219,7 +219,7 @@
         <!--Stats Detail Controller-->
         <scene sceneID="RSN-X0-8Q4">
             <objects>
-                <viewController id="288-Dg-Lw8" customClass="StatsDetailController" customModule="StatisticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="statsdetailid" id="288-Dg-Lw8" customClass="StatsDetailController" customModule="StatisticsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h9m-3m-LvX"/>
                         <viewControllerLayoutGuide type="bottom" id="jhI-65-hxi"/>
@@ -277,7 +277,7 @@
         <!--Navigation Controller-->
         <scene sceneID="egh-LF-Wgb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="24J-Kp-qo0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navconid" automaticallyAdjustsScrollViewInsets="NO" id="24J-Kp-qo0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S1N-Io-eby">
