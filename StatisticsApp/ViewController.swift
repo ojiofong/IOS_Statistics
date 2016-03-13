@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import SigmaSwiftStatistics
+import SigmaSwiftStatistics
 import MZAppearance
 
 
@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
-//        let i : Int = Int(Sigma.median([3,2,1,4,5])!)
-//        let s : String = "yes sir \(i)"
-//        print(s)
+        let i : Int = Int(Sigma.median([3,2,1,4,5])!)
+        let s : String = "yes sir \(i)"
+        print(s)
     
     }
     
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(sender: UIButton) {
         let buttonTitle = sender.titleForState(.Normal)!
         mTextLabel.text = "clicked on \(buttonTitle)";
-        showMZFormSheet()
+        //showMZFormSheet()
         
         
         //performSegueWithIdentifier("Screen3", sender: nil)

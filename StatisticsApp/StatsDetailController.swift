@@ -29,12 +29,24 @@ class StatsDetailController: UIViewController {
     }
 
     @IBAction func onClickButtonTestMyKnowledge(sender: AnyObject) {
-        JLToast.makeText("Test my knowledge").show()
+       // JLToast.makeText("Test my knowledge").show()
+        showMZFormSheet()
     }
     
     func initViews(){
         labelTitle.text = textTitle
         labelDescription.text = textDescription
         labelExample.text = textExample
+    }
+    
+    
+    func showMZFormSheet(){
+        let navigationController = self.storyboard!.instantiateViewControllerWithIdentifier("formsheetnavcon") as! UINavigationController
+        let formSheetController = MZFormSheetPresentationViewController(contentViewController: navigationController)
+        formSheetController.presentationController?.contentViewSize = CGSizeMake(300, 300)
+        formSheetController.presentationController?.shouldCenterVertically = true
+        formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
+        
+        self.presentViewController(formSheetController, animated: true, completion: nil)
     }
 }

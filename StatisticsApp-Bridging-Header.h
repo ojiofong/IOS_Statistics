@@ -8,9 +8,7 @@
 
 #ifndef StatisticsApp_Bridging_Header_h
 #define StatisticsApp_Bridging_Header_h
+#endif /* StatisticsApp_Bridging_Header_h */
 
 #import "MZFormSheetPresentationViewController.h"
 //#import "MZFormSheetPresentationControllerSegue.h"
-
-
-#endif /* StatisticsApp_Bridging_Header_h */
