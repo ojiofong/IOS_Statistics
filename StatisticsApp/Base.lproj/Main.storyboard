@@ -233,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="2189.5" y="-0.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz Controller-->
         <scene sceneID="GJo-Fj-rGM">
             <objects>
-                <viewController id="7TL-ec-Hot" sceneMemberID="viewController">
+                <viewController id="7TL-ec-Hot" customClass="QuizController" customModule="StatisticsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nkh-aT-nGr"/>
                         <viewControllerLayoutGuide type="bottom" id="MqL-Te-JWO"/>

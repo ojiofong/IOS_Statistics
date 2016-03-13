@@ -21,6 +21,7 @@
 		3751B5E11C94E3ED006AF175 /* MZMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3751B5D31C94E3ED006AF175 /* MZMethodSwizzler.m */; };
 		3751B5E21C94E3ED006AF175 /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3751B5D51C94E3ED006AF175 /* MZTransition.m */; };
 		3751B5E31C94E3ED006AF175 /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3751B5D71C94E3ED006AF175 /* UIViewController+TargetViewController.m */; };
+		3751B5E51C9537ED006AF175 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751B5E41C9537ED006AF175 /* QuizController.swift */; };
 		376064F91C6E45E800EF1A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376064F81C6E45E800EF1A31 /* AppDelegate.swift */; };
 		376064FB1C6E45E800EF1A31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376064FA1C6E45E800EF1A31 /* ViewController.swift */; };
 		376064FE1C6E45E800EF1A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376064FC1C6E45E800EF1A31 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		3751B5D51C94E3ED006AF175 /* MZTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTransition.m; sourceTree = "<group>"; };
 		3751B5D61C94E3ED006AF175 /* UIViewController+TargetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TargetViewController.h"; sourceTree = "<group>"; };
 		3751B5D71C94E3ED006AF175 /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
+		3751B5E41C9537ED006AF175 /* QuizController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 		376064F51C6E45E800EF1A31 /* StatisticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatisticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376064F81C6E45E800EF1A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376064FA1C6E45E800EF1A31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				3790667E1C7EBF9E006C68EB /* SecondViewController.swift */,
 				379066791C7EBF48006C68EB /* StatsDetailController.swift */,
 				3790667B1C7EBF9E006C68EB /* MainViewController.swift */,
+				3751B5E41C9537ED006AF175 /* QuizController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				379066901C7EC18A006C68EB /* JLToastWindow.swift in Sources */,
 				379066821C7EBF9E006C68EB /* SecondViewController.swift in Sources */,
 				3790667A1C7EBF48006C68EB /* StatsDetailController.swift in Sources */,
+				3751B5E51C9537ED006AF175 /* QuizController.swift in Sources */,
 				376064F91C6E45E800EF1A31 /* AppDelegate.swift in Sources */,
 				3790668E1C7EC18A006C68EB /* JLToastCenter.swift in Sources */,
 				3751B5E01C94E3ED006AF175 /* MZFormSheetPresentationViewControllerSegue.m in Sources */,
