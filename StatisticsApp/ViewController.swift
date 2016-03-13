@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var editTextField: UITextField!
     
     @IBAction func goToStatistics(sender: AnyObject) {
-        showToastView()
+   //     showToastView()
         goToCustomTableViewScreen()
         
         

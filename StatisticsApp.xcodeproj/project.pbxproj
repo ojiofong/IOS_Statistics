@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373A17AA1C95E851004175F2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A17A91C95E851004175F2 /* Utils.swift */; };
 		3747A6771C83C06A00BDD114 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3747A6761C83C06A00BDD114 /* .gitignore */; };
 		3747A6841C85478100BDD114 /* stats.json in Resources */ = {isa = PBXBuildFile; fileRef = 3747A6831C85478100BDD114 /* stats.json */; };
 		3751B5D81C94E3ED006AF175 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3751B5BD1C94E3ED006AF175 /* Info.plist */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373A17A91C95E851004175F2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3747A6761C83C06A00BDD114 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3747A6831C85478100BDD114 /* stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stats.json; sourceTree = "<group>"; };
 		3751B5BD1C94E3ED006AF175 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373A17A81C95E851004175F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				373A17A91C95E851004175F2 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3747A6721C7EC31500BDD114 /* JLToast */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 		376064F71C6E45E800EF1A31 /* StatisticsApp */ = {
 			isa = PBXGroup;
 			children = (
+				373A17A81C95E851004175F2 /* Utils */,
 				3747A6821C852AC400BDD114 /* view */,
 				379066861C7EC116006C68EB /* Controller */,
 				379066841C7EC107006C68EB /* Model */,
@@ -389,6 +400,7 @@
 				3751B5DD1C94E3ED006AF175 /* MZFormSheetPresentationViewController.m in Sources */,
 				3751B5E11C94E3ED006AF175 /* MZMethodSwizzler.m in Sources */,
 				3751B5DC1C94E3ED006AF175 /* MZFormSheetPresentationController.m in Sources */,
+				373A17AA1C95E851004175F2 /* Utils.swift in Sources */,
 				3751B5DF1C94E3ED006AF175 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m in Sources */,
 				37DEF5131C94BC67004B4CE9 /* File.swift in Sources */,
 				3751B5E21C94E3ED006AF175 /* MZTransition.m in Sources */,
