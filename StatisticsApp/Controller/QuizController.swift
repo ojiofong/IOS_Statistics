@@ -9,7 +9,7 @@
 import UIKit
 import SigmaSwiftStatistics
 
-class QuizController : UIViewController{
+class QuizController : UIViewController, UITextFieldDelegate{
     
     var textTitle = ""
     var textQuestion = "Given the data below, find the "
@@ -20,12 +20,53 @@ class QuizController : UIViewController{
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var labelData: UILabel!
     @IBOutlet weak var textFieldAnswer: UITextField!
+    @IBOutlet weak var buttonSubmit: UIButton!
     
     @IBAction func buttonPressedSubmit(sender: AnyObject) {
         textAns = textFieldAnswer.text!
-        //isCorrect = isans
-        JLToast.makeText("submit \(textAns) is \(isAnsCorrect(textAns, intArr: arr))").show()
+        textAns = Utils.trim(textAns)
+        
+        
+        if (textAns.isEmpty){
+            JLToast.makeText("TextField cannot be empty").show()
+        }else if (!Utils.isNumeric(textAns)){
+            JLToast.makeText("Please enter a valid number").show()
+        }else{
+            JLToast.makeText("submit \(textAns) is \(isAnsCorrect(textAns, intArr: arr))").show()
+        }
     }
+    
+    /**
+     *   on textField change listener
+     **/
+//    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+//        // Find out what the text field will be after adding the current edit
+//        let text : NSString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
+//        
+//        print("string \(text)")
+//        
+//        
+//        var double = text.doubleValue
+//        
+//        print("double \(double)")
+//        print("int \(text.integerValue)")
+//        
+//        var ss : String = "hello"
+//        
+//        
+//        
+////        if let intVal : String = text.toInt(){
+////            //print("isDouble \(true)")
+////            buttonSubmit.enabled = true
+////        } else {
+////            //print("isDouble \(false)")
+////            buttonSubmit.enabled = false
+////        }
+//        
+//        // Return true so the text field will be changed
+//        return true
+//    }
+    
     
     
     override func viewDidLoad() {
@@ -50,6 +91,17 @@ class QuizController : UIViewController{
         for var i = 0; i < length; i++ {
             let element : Int = Utils.randomNumber(1...12) // random number from 1 to 12
             arr.insert(element, atIndex: i)
+        }
+        
+        // if user selected "Mode" ensure duplicate exists
+        if(textTitle == "Mode"){
+            let val  = Utils.randomNumber(1...12)
+            let lastIndex = arr.count - 1 ;
+            
+            arr[Utils.randomNumber(0...lastIndex)] = val
+            arr[Utils.randomNumber(0...lastIndex)] = val
+            arr.insert(val, atIndex: Utils.randomNumber(0...lastIndex))
+            
         }
         
         return arr
@@ -83,11 +135,8 @@ class QuizController : UIViewController{
             break
             
         case "Mode":
-            isCorrect =  Utils.mode(Double(answer)!, doubleArr: getDoubleArr(intArr))
+            isCorrect =  Utils.isInputModeOfArray(Double(answer)!, doubleArr: getDoubleArr(intArr))
             break
-            
-            
-            
             
         default:
             // do nothing
@@ -109,5 +158,6 @@ class QuizController : UIViewController{
         
         return doubleArr;
     }
+    
     
 }

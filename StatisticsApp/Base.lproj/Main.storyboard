@@ -258,6 +258,9 @@
                                 <rect key="frame" x="65" y="193" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7TL-ec-Hot" id="cbN-0W-yMg"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6J-j5-WXr">
                                 <rect key="frame" x="194" y="192" width="49" height="30"/>
@@ -290,6 +293,7 @@
                     <navigationItem key="navigationItem" id="jH3-LN-gUM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="buttonSubmit" destination="g6J-j5-WXr" id="OAo-8I-q9h"/>
                         <outlet property="labelData" destination="48e-Gp-vtV" id="sbr-Eg-uNr"/>
                         <outlet property="labelQuestion" destination="iKI-qX-yr0" id="64c-nr-1xJ"/>
                         <outlet property="textFieldAnswer" destination="8zz-50-kta" id="JhL-NN-cQt"/>
