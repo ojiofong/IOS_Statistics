@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SigmaSwiftStatistics
 
 class QuizController : UIViewController{
     
@@ -22,7 +23,8 @@ class QuizController : UIViewController{
     
     @IBAction func buttonPressedSubmit(sender: AnyObject) {
         textAns = textFieldAnswer.text!
-        JLToast.makeText("submit \(textAns) is \(isCorrect)").show()
+        //isCorrect = isans
+        JLToast.makeText("submit \(textAns) is \(isAnsCorrect(textAns, intArr: arr))").show()
     }
     
     
@@ -51,6 +53,61 @@ class QuizController : UIViewController{
         }
         
         return arr
+    }
+    
+    func isAnsCorrect(answer : String, intArr : [Int])->Bool{
+        
+        var isCorrect : Bool = false;
+        
+        switch textTitle {
+            
+        case "Average":
+            // Sigma accepts only double array so convert [Int] to [Double]
+            isCorrect =  Double(answer) == Sigma.average(getDoubleArr(intArr))
+            break
+            
+        case "Min":
+            isCorrect =  Double(answer) == Sigma.min(getDoubleArr(intArr))
+            break
+            
+        case "Max":
+            isCorrect =  Double(answer) == Sigma.max(getDoubleArr(intArr))
+            break
+            
+        case "Median":
+            isCorrect =  Double(answer) == Sigma.median(getDoubleArr(intArr))
+            break
+            
+        case "Mean":
+            isCorrect =  Double(answer) == Sigma.average(getDoubleArr(intArr))
+            break
+            
+        case "Mode":
+            isCorrect =  Utils.mode(Double(answer)!, doubleArr: getDoubleArr(intArr))
+            break
+            
+            
+            
+            
+        default:
+            // do nothing
+            break
+            
+            
+        }
+        
+        return isCorrect;
+    }
+    
+    func getDoubleArr(intArr : [Int])->[Double]{
+        
+        var doubleArr : [Double] = [];
+        
+        for (index, value) in intArr.enumerate() {
+            doubleArr.insert(Double(value), atIndex: index)
+        }
+        
+        return doubleArr;
     }
     
 }

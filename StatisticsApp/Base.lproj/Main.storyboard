@@ -245,8 +245,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48e-Gp-vtV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48e-Gp-vtV">
                                 <rect key="frame" x="20" y="141" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="ZCt-HA-gWG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -263,14 +266,26 @@
                                     <action selector="buttonPressedSubmit:" destination="7TL-ec-Hot" eventType="touchUpInside" id="Uhd-1X-aVq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKI-qX-yr0">
-                                <rect key="frame" x="16" y="81" width="347" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKI-qX-yr0">
+                                <rect key="frame" x="16" y="81" width="347" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="7Fh-g3-v0k"/>
+                                    <constraint firstAttribute="width" constant="347" id="pit-1M-7kf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.55071920764001581" green="1" blue="0.8479979036143277" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="48e-Gp-vtV" secondAttribute="trailing" constant="20" id="ExG-rV-sh6"/>
+                            <constraint firstItem="iKI-qX-yr0" firstAttribute="top" secondItem="nkh-aT-nGr" secondAttribute="bottom" constant="17" id="Gfs-ox-Klv"/>
+                            <constraint firstAttribute="trailing" secondItem="iKI-qX-yr0" secondAttribute="trailing" constant="12" id="MAj-rR-ovy"/>
+                            <constraint firstItem="48e-Gp-vtV" firstAttribute="leading" secondItem="arI-Pj-1wo" secondAttribute="leading" constant="20" id="RHY-V4-AVz"/>
+                            <constraint firstItem="iKI-qX-yr0" firstAttribute="leading" secondItem="arI-Pj-1wo" secondAttribute="leading" constant="16" id="cGp-Rt-PzE"/>
+                            <constraint firstItem="48e-Gp-vtV" firstAttribute="top" secondItem="iKI-qX-yr0" secondAttribute="bottom" constant="8" id="dXA-zG-4zI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jH3-LN-gUM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

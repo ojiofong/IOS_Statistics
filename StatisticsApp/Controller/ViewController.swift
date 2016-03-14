@@ -8,7 +8,6 @@
 
 import UIKit
 import SigmaSwiftStatistics
-import MZAppearance
 
 
 
@@ -21,8 +20,6 @@ class ViewController: UIViewController {
     @IBAction func goToStatistics(sender: AnyObject) {
    //     showToastView()
         goToCustomTableViewScreen()
-        
-        
         
     }
     
@@ -44,7 +41,6 @@ class ViewController: UIViewController {
         let buttonTitle = sender.titleForState(.Normal)!
         mTextLabel.text = "clicked on \(buttonTitle)";
         //showMZFormSheet()
-        
         
         //performSegueWithIdentifier("Screen3", sender: nil)
         
