@@ -29,7 +29,39 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewWillAppear(animated: Bool) {
         setViewControllerTitle("Statistics for Jerks")
+        customizeNavBar()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+    }
+    
+    func customizeNavBar(){
+        // customize navigation bar
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.Black
+        nav?.tintColor = UIColor.yellowColor()
+        //nav?.barTintColor = UIColor.grayColor()
+        
+        // change nav bar height and width
+        let screen = UIScreen.mainScreen().bounds
+        let screenWidth = screen.size.width
+        //let screenHeight = screen.size.height
+        
+        nav?.frame=CGRectMake(0, 0, screenWidth, 70)  // Here you can set you Width and Height for your navBar
+    
+    }
+    
+    
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+        //
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        //
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

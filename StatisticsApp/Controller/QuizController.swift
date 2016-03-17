@@ -8,6 +8,8 @@
 
 import UIKit
 import SigmaSwiftStatistics
+import BEMCheckBox
+
 
 class QuizController : UIViewController, UITextFieldDelegate{
     
@@ -17,10 +19,15 @@ class QuizController : UIViewController, UITextFieldDelegate{
     var isCorrect : Bool = false
     var textAns = ""
     
+    
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var labelData: UILabel!
     @IBOutlet weak var textFieldAnswer: UITextField!
     @IBOutlet weak var buttonSubmit: UIButton!
+    @IBOutlet weak var labelRightOrWrong: UILabel!
+    
+    @IBOutlet weak var benCheckBox: BEMCheckBox!
+    
     
     @IBAction func buttonPressedSubmit(sender: AnyObject) {
         textAns = textFieldAnswer.text!
@@ -32,40 +39,14 @@ class QuizController : UIViewController, UITextFieldDelegate{
         }else if (!Utils.isNumeric(textAns)){
             JLToast.makeText("Please enter a valid number").show()
         }else{
-            JLToast.makeText("submit \(textAns) is \(isAnsCorrect(textAns, intArr: arr))").show()
+            if(isAnsCorrect(textAns, intArr: arr)){
+                updateViewForCorrectAnswer()
+            }else{
+                updateViewForWrongAnswer()
+            }
+            self.view.endEditing(true)
         }
     }
-    
-    /**
-     *   on textField change listener
-     **/
-//    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-//        // Find out what the text field will be after adding the current edit
-//        let text : NSString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
-//        
-//        print("string \(text)")
-//        
-//        
-//        var double = text.doubleValue
-//        
-//        print("double \(double)")
-//        print("int \(text.integerValue)")
-//        
-//        var ss : String = "hello"
-//        
-//        
-//        
-////        if let intVal : String = text.toInt(){
-////            //print("isDouble \(true)")
-////            buttonSubmit.enabled = true
-////        } else {
-////            //print("isDouble \(false)")
-////            buttonSubmit.enabled = false
-////        }
-//        
-//        // Return true so the text field will be changed
-//        return true
-//    }
     
     
     
@@ -75,6 +56,8 @@ class QuizController : UIViewController, UITextFieldDelegate{
         arr = generateRandomArrayOfNumbers()
         labelQuestion.text = textQuestion + textTitle
         labelData.text = String(arr)
+        
+        hideViewForCorrectOrWrongAnswer(true)
     }
     
     // Called whenever user clicks outside on main view
@@ -111,11 +94,13 @@ class QuizController : UIViewController, UITextFieldDelegate{
         
         var isCorrect : Bool = false;
         
+        
         switch textTitle {
             
         case "Average":
             // Sigma accepts only double array so convert [Int] to [Double]
-            isCorrect =  Double(answer) == Sigma.average(getDoubleArr(intArr))
+            let average = Sigma.average(getDoubleArr(intArr))
+            isCorrect =  Double(answer) == average
             break
             
         case "Min":
@@ -131,7 +116,8 @@ class QuizController : UIViewController, UITextFieldDelegate{
             break
             
         case "Mean":
-            isCorrect =  Double(answer) == Sigma.average(getDoubleArr(intArr))
+            let mean = Sigma.average(getDoubleArr(intArr))
+            isCorrect =  Double(answer) == mean
             break
             
         case "Mode":
@@ -157,6 +143,36 @@ class QuizController : UIViewController, UITextFieldDelegate{
         }
         
         return doubleArr;
+    }
+    
+    
+    func updateViewForWrongAnswer(){
+        hideViewForCorrectOrWrongAnswer(false)
+        benCheckBox.onAnimationType = BEMAnimationType.Bounce
+        benCheckBox.offAnimationType = BEMAnimationType.Bounce
+        benCheckBox.onFillColor = UIColor.redColor()
+        benCheckBox.onTintColor = UIColor.blackColor()
+        benCheckBox.onCheckColor = UIColor.redColor() //Hides this
+        labelRightOrWrong.text = "Wrong! Try again"
+        benCheckBox.setOn(true, animated: true)
+        benCheckBox.userInteractionEnabled = false
+    }
+    
+    func updateViewForCorrectAnswer(){
+        hideViewForCorrectOrWrongAnswer(false)
+        benCheckBox.onAnimationType = BEMAnimationType.Bounce
+        benCheckBox.offAnimationType = BEMAnimationType.Bounce
+        benCheckBox.onFillColor = UIColor.greenColor()
+        benCheckBox.onTintColor = UIColor.blackColor()
+        benCheckBox.onCheckColor = UIColor.blackColor() //Hides this
+        labelRightOrWrong.text = "Awesome sauce!"
+        benCheckBox.setOn(true, animated: true)
+        benCheckBox.userInteractionEnabled = false
+    }
+    
+    func hideViewForCorrectOrWrongAnswer(shouldHide:Bool){
+        benCheckBox.hideBox = shouldHide
+        labelRightOrWrong.hidden = shouldHide
     }
     
     

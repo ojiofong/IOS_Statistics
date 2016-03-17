@@ -1,10 +1,13 @@
 PODS:
+  - BEMCheckBox (1.2.0)
   - SigmaSwiftStatistics (1.1.6)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - SigmaSwiftStatistics (~> 1.1)
 
 SPEC CHECKSUMS:
+  BEMCheckBox: fcfbbf42cf23d38fbb605c72f63db9ae82d6acd3
   SigmaSwiftStatistics: ba8d19e4a13ff97febc9a168e08c1687d8480057
 
 COCOAPODS: 0.39.0

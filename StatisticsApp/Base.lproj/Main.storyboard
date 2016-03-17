@@ -279,8 +279,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fE-vs-4uG" customClass="BEMCheckBox">
+                                <rect key="frame" x="46" y="251" width="65" height="62"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Awesome again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Po-WG-RWP">
+                                <rect key="frame" x="119" y="271" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.55071920764001581" green="1" blue="0.8479979036143277" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="48e-Gp-vtV" secondAttribute="trailing" constant="20" id="ExG-rV-sh6"/>
                             <constraint firstItem="iKI-qX-yr0" firstAttribute="top" secondItem="nkh-aT-nGr" secondAttribute="bottom" constant="17" id="Gfs-ox-Klv"/>
@@ -293,9 +303,11 @@
                     <navigationItem key="navigationItem" id="jH3-LN-gUM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="benCheckBox" destination="9fE-vs-4uG" id="afi-Iz-8kW"/>
                         <outlet property="buttonSubmit" destination="g6J-j5-WXr" id="OAo-8I-q9h"/>
                         <outlet property="labelData" destination="48e-Gp-vtV" id="sbr-Eg-uNr"/>
                         <outlet property="labelQuestion" destination="iKI-qX-yr0" id="64c-nr-1xJ"/>
+                        <outlet property="labelRightOrWrong" destination="0Po-WG-RWP" id="vUx-iN-RrG"/>
                         <outlet property="textFieldAnswer" destination="8zz-50-kta" id="JhL-NN-cQt"/>
                     </connections>
                 </viewController>
