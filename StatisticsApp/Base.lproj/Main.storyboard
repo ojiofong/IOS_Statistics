@@ -364,6 +364,7 @@
                     <navigationItem key="navigationItem" id="ED0-eR-6lN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="buttonTestKnowledge" destination="eP0-Sh-WVL" id="5Gi-gP-KrY"/>
                         <outlet property="labelDescription" destination="5DW-y1-skQ" id="sqx-t1-E9X"/>
                         <outlet property="labelExample" destination="Imd-AN-Hpp" id="AmW-FG-X5e"/>
                         <outlet property="labelTitle" destination="wkG-2M-gcc" id="rdd-5g-cjX"/>

@@ -17,6 +17,7 @@ class StatsDetailController: UIViewController {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelExample: UILabel!
+    @IBOutlet weak var buttonTestKnowledge: UIButton!
     
     override func viewWillAppear(animated: Bool) {
         initViews()
@@ -26,6 +27,7 @@ class StatsDetailController: UIViewController {
         super.viewDidLoad()
         self.title = textTitle
         initViews()
+        hideButtonTestKnowledgeIfNeeded()
     }
 
     @IBAction func onClickButtonTestMyKnowledge(sender: AnyObject) {
@@ -52,5 +54,22 @@ class StatsDetailController: UIViewController {
         presentedViewController.textTitle = self.textTitle
         
         self.presentViewController(formSheetController, animated: true, completion: nil)
+    }
+    
+    /**
+     * Hide testMyKnowledge button if we don't have any quiz to show
+     **/
+    func hideButtonTestKnowledgeIfNeeded(){
+        
+        switch (textTitle){
+            
+        case "Statistics":
+            buttonTestKnowledge.hidden = true
+            break
+            
+        default: break
+            
+        }
+        
     }
 }
