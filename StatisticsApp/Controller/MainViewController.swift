@@ -43,11 +43,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //nav?.barTintColor = UIColor.grayColor()
         
         // change nav bar height and width
-        let screen = UIScreen.mainScreen().bounds
-        let screenWidth = screen.size.width
+        //let screen = UIScreen.mainScreen().bounds
+        //let screenWidth = screen.size.width
         //let screenHeight = screen.size.height
         
-        nav?.frame=CGRectMake(0, 0, screenWidth, 70)  // Here you can set you Width and Height for your navBar
+       // nav?.frame=CGRectMake(0, 0, screenWidth, 70)  // Here you can set you Width and Height for your navBar
     
     }
     

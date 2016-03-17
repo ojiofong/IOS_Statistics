@@ -100,7 +100,7 @@ class QuizController : UIViewController, UITextFieldDelegate{
         case "Average":
             // Sigma accepts only double array so convert [Int] to [Double]
             let average = Sigma.average(getDoubleArr(intArr))
-            isCorrect =  Double(answer) == average
+            isCorrect =  Double(answer) == roundToDecimalPlaces(average!, places: 1)
             break
             
         case "Min":
@@ -117,7 +117,7 @@ class QuizController : UIViewController, UITextFieldDelegate{
             
         case "Mean":
             let mean = Sigma.average(getDoubleArr(intArr))
-            isCorrect =  Double(answer) == mean
+            isCorrect =  Double(answer) == roundToDecimalPlaces(mean!, places: 1)
             break
             
         case "Mode":
@@ -175,5 +175,9 @@ class QuizController : UIViewController, UITextFieldDelegate{
         labelRightOrWrong.hidden = shouldHide
     }
     
+    func roundToDecimalPlaces(value:Double, places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return round(value * divisor) / divisor
+    }
     
 }
