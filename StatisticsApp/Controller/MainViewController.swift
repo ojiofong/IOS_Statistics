@@ -32,9 +32,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         customizeNavBar()
     }
     
-    override func viewDidAppear(animated: Bool) {
-    }
-    
     func customizeNavBar(){
         // customize navigation bar
         let nav = self.navigationController?.navigationBar

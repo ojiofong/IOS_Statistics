@@ -124,6 +124,10 @@ class QuizController : UIViewController, UITextFieldDelegate{
             isCorrect =  Utils.isInputModeOfArray(Double(answer)!, doubleArr: getDoubleArr(intArr))
             break
             
+        case "Sum":
+            isCorrect = Double(answer) == Sigma.sum(getDoubleArr(intArr))
+            break
+            
         default:
             // do nothing
             break
