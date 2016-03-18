@@ -2,7 +2,7 @@
     "ITEMS": [
               {
               "TITLE": "Average",
-              "EXAMPLE": "The average of the following three numbers [2,4,6] is (2 + 4 + 6)/3 = 12/3 = 4",
+              "EXAMPLE": "The average of the following three numbers [2,4,6] is (2 + 4 + 6)/3 = 12/3 = 4. Note that we divided by 3 because we have a count of 3 numbers in the list",
               "DETAILS": "The sum of a list of numbers divided by the number of numbers"
               },
               
@@ -30,7 +30,7 @@
               
               {
               "TITLE": "Mean",
-              "EXAMPLE": "The mean or average of the following three numbers [2, 4, 6] is (2 + 4 + 6)/3 = 12/3 = 4",
+              "EXAMPLE": "The mean or average of the following three numbers [2, 4, 6] is (2 + 4 + 6)/3 = 12/3 = 4. Note that we divided by 3 because we have a count of 3 numbers in the list",
               "DETAILS": "Mean is synonymous to Average which is the sum of a list of numbers divided by the number of numbers"
               },
               
