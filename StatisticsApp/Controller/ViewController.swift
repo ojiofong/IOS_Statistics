@@ -24,7 +24,15 @@ class ViewController: UIViewController {
     }
     
     
+    func setViewControllerTitle( mTitle : String){
+        self.title = mTitle
+    }
+    
+    
     override func viewWillAppear(animated: Bool) {
+        
+        setViewControllerTitle("Statistics for Jerks")
+        
         let i : Int = Int(Sigma.median([3,2,1,4,5])!)
         let s : String = "yes sir \(i)"
         print(s)
@@ -68,6 +76,7 @@ class ViewController: UIViewController {
     
     func goToCustomTableViewScreen(){
         performSegueWithIdentifier("customTable", sender: nil)
+        setViewControllerTitle("Back") // Update the back button of the next viewController
     }
     
     
