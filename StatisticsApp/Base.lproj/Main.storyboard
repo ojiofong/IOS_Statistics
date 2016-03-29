@@ -31,12 +31,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Statistics for Jerks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfY-9x-sIh">
-                                <rect key="frame" x="30" y="258" width="335" height="77"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_place_coffee" translatesAutoresizingMaskIntoConstraints="NO" id="6A9-yv-B9u">
                                 <rect key="frame" x="134" y="119" width="107" height="84"/>
                             </imageView>
@@ -55,19 +49,22 @@
                                     <action selector="goToStatistics:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B7w-8Y-fKA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Statistics for Jerks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfY-9x-sIh">
+                                <rect key="frame" x="20" y="255" width="335" height="77"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qSV-aP-LXi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N7L-eM-pIV"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qSV-aP-LXi" secondAttribute="bottom" constant="20" id="Px3-8A-44o"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="qSV-aP-LXi"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="fhF-m5-Jmr"/>
+                    <navigationItem key="navigationItem" id="fhF-m5-Jmr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="bbs-3r-hOe"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mTextLabel" destination="Bkz-cl-Nc6" id="rOd-nW-13e"/>
