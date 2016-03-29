@@ -164,7 +164,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         jsonArray = dict.valueForKey("ITEMS") as! NSArray
         
-        for (var i = 0; i < jsonArray.count; i++) {
+        for i in 0 ..< jsonArray.count {
             
             arrDict.addObject(jsonArray.objectAtIndex(i))
         }

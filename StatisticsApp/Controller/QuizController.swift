@@ -71,7 +71,7 @@ class QuizController : UIViewController, UITextFieldDelegate{
         let length : Int = Utils.randomNumber(3...5)  // random length of 3 to 5
         var arr : [Int] = []
         
-        for var i = 0; i < length; i++ {
+        for i in 0 ..< length {
             let element : Int = Utils.randomNumber(1...12) // random number from 1 to 12
             arr.insert(element, atIndex: i)
         }

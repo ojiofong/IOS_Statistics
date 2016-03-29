@@ -29,11 +29,11 @@ public class Utils {
         
         for (_, value) in doubleArr.enumerate(){
             if(value == input){
-                inputCount++;
+                inputCount += 1
             }
             
             //Ascii part
-            asciiArr[Int(value)]++
+            asciiArr[Int(value)] += 1
         }
         
         for (_, value) in doubleArr.enumerate() {
@@ -70,7 +70,7 @@ public class Utils {
         var dotCount = 0;
         var dict : [Character : Character] = ["0":"0", "1":"1", "2":"2", "3":"3", "4":"4", "5":"5", "6":"6", "7":"7", "8":"8", "9":"9", ".":"."]
         
-        for (var i = 0; i < length; i++) {
+        for i in 0 ..< length {
             
             // check check if every character is in dictionary
             let c : Character = str[str.startIndex.advancedBy(i)]
@@ -80,7 +80,8 @@ public class Utils {
             
             // check for duplicate "." character
             if (c == ".") {
-                if (++dotCount > 1){
+                dotCount += 1
+                if (dotCount > 1){
                     return false
                 }
             }
