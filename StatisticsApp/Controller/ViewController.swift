@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        setViewControllerTitle("Statistics for Jerks")
+        setViewControllerTitle(Const.APP_NAME)
         customizeNavBar();
         
         let i : Int = Int(Sigma.median([3,2,1,4,5])!)

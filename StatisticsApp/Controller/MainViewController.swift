@@ -28,7 +28,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     ]
     
     override func viewWillAppear(animated: Bool) {
-        setViewControllerTitle("Statistics for Jerks")
+        setViewControllerTitle(Const.APP_NAME)
         customizeNavBar()
     }
     

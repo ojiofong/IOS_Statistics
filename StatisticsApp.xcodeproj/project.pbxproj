@@ -38,6 +38,7 @@
 		376064FE1C6E45E800EF1A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376064FC1C6E45E800EF1A31 /* Main.storyboard */; };
 		376065001C6E45E800EF1A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376064FF1C6E45E800EF1A31 /* Assets.xcassets */; };
 		376065031C6E45E800EF1A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376065011C6E45E800EF1A31 /* LaunchScreen.storyboard */; };
+		37BD67F71CB8040200ABA5D6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD67F61CB8040200ABA5D6 /* Const.swift */; };
 		4E650F7AA32555C1C44EBA08 /* Pods_StatisticsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22BEF7582212392D7E35B19 /* Pods_StatisticsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		376065021C6E45E800EF1A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		376065041C6E45E800EF1A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37B6F7CB1C94BA2900FB155C /* StatisticsApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StatisticsApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		37BD67F61CB8040200ABA5D6 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		37DC87BB1C949630003BE7CD /* MZAppearance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MZAppearance.framework; path = Carthage/Build/iOS/MZAppearance.framework; sourceTree = "<group>"; };
 		37DC87BC1C949630003BE7CD /* MZFormSheetPresentationController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MZFormSheetPresentationController.framework; path = Carthage/Build/iOS/MZFormSheetPresentationController.framework; sourceTree = "<group>"; };
 		AD4699EB29D6E495495E7D46 /* Pods-StatisticsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StatisticsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StatisticsApp/Pods-StatisticsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				373A17A91C95E851004175F2 /* Utils.swift */,
+				37BD67F61CB8040200ABA5D6 /* Const.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				370D43061CAB117A003D93C5 /* UIViewController+TargetViewController.m in Sources */,
 				370D42F71CAB117A003D93C5 /* JLToast.swift in Sources */,
 				373A17C01C95F8C7004175F2 /* QuizController.swift in Sources */,
+				37BD67F71CB8040200ABA5D6 /* Const.swift in Sources */,
 				373A17B21C95F7C9004175F2 /* test.swift in Sources */,
 				376064F91C6E45E800EF1A31 /* AppDelegate.swift in Sources */,
 				370D42FF1CAB117A003D93C5 /* MZFormSheetPresentationController.m in Sources */,
