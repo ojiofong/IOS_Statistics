@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mTextLabel: UILabel!
     @IBOutlet weak var editTextField: UITextField!
+    @IBOutlet weak var buttonRight: UIButton!
     
     @IBAction func goToStatistics(sender: AnyObject) {
    //     showToastView()
@@ -31,12 +32,19 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         setViewControllerTitle(Const.APP_NAME)
+        hideUnwantedView()
         customizeNavBar();
         
         let i : Int = Int(Sigma.median([3,2,1,4,5])!)
         let s : String = "yes sir \(i)"
         print(s)
     
+    }
+    
+    
+    func hideUnwantedView(){
+        // hide the buttom right button
+        buttonRight.hidden = true
     }
     
     
