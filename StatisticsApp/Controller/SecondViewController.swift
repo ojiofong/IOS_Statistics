@@ -12,10 +12,11 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var mTableView: UITableView!
     
+    
     let peopleData = [
-        ("Michael", "SpankWire"),
+        ("Michael", "CopperWire"),
         ("Oji", "TechCrunch"),
-        ("Benton", "Youjizz"),
+        ("Benton", "Youbot"),
         ("Jimmy", "Blogger")
     ]
     
@@ -106,6 +107,11 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             screen3VController?.textTitle = sender as! String
             
         }
+    }
+    
+    
+    func hideButtonRight(){
+//     let buttonRight =
     }
     
 

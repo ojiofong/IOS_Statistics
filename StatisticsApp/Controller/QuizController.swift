@@ -56,8 +56,14 @@ class QuizController : UIViewController, UITextFieldDelegate{
         arr = generateRandomArrayOfNumbers()
         labelQuestion.text = textQuestion + textTitle
         labelData.text = String(arr)
-        
         hideViewForCorrectOrWrongAnswer(true)
+        customizeNavigationBar()
+    }
+    
+    func customizeNavigationBar(){
+        // Remove nav bar bottom border
+        navigationController?.navigationBar.shadowImage = UIImage();
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
     }
     
     // Called whenever user clicks outside on main view

@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     
     func goToCustomTableViewScreen(){
         performSegueWithIdentifier("customTable", sender: nil)
-        setViewControllerTitle("Back") // Update the back button of the next viewController
+        //setViewControllerTitle("") // Update the back button of the next viewController
     }
     
     
