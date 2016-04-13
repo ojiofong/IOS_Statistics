@@ -541,7 +541,7 @@
 				);
 				INFOPLIST_FILE = StatisticsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.StatisticsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ojiofong.statistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StatisticsApp-Bridging-Header.h";
 			};
@@ -558,7 +558,7 @@
 				);
 				INFOPLIST_FILE = StatisticsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.StatisticsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ojiofong.statistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StatisticsApp-Bridging-Header.h";
 			};

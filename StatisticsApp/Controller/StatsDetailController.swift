@@ -45,7 +45,7 @@ class StatsDetailController: UIViewController {
     func showMZFormSheet(){
         let navigationController = self.storyboard!.instantiateViewControllerWithIdentifier("formsheetnavcon") as! UINavigationController
         let formSheetController = MZFormSheetPresentationViewController(contentViewController: navigationController)
-        formSheetController.presentationController?.contentViewSize = CGSizeMake(300, 400)
+        formSheetController.presentationController?.contentViewSize = CGSizeMake(300, 350)
         formSheetController.presentationController?.shouldCenterVertically = true
         formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
         
