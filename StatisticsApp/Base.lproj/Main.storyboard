@@ -332,33 +332,62 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkG-2M-gcc">
-                                <rect key="frame" x="102" y="111" width="171" height="51"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description goes here on this line until it overflows" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-y1-skQ">
-                                <rect key="frame" x="20" y="160" width="335" height="113"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Example goes here on this line until it overflows" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imd-AN-Hpp">
-                                <rect key="frame" x="20" y="241" width="335" height="130"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-Sh-WVL">
-                                <rect key="frame" x="120" y="379" width="134" height="42"/>
-                                <state key="normal" title="Test my Knowledge"/>
-                                <connections>
-                                    <action selector="onClickButtonTestMyKnowledge:" destination="288-Dg-Lw8" eventType="touchUpInside" id="1qx-1z-T9v"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-Kx-3tM">
+                                <rect key="frame" x="26" y="84" width="323" height="345"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkG-2M-gcc">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="MDE-jN-Tpo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description goes here on this line until it overflows" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-y1-skQ">
+                                        <rect key="frame" x="0.0" y="63" width="323" height="91"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="91" id="Mbg-z8-zGg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example goes here on this line until it overflows" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imd-AN-Hpp">
+                                        <rect key="frame" x="0.0" y="184" width="323" height="91"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="91" id="qEw-5e-eh1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-Sh-WVL">
+                                        <rect key="frame" x="0.0" y="305" width="323" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="drF-P0-QIA"/>
+                                        </constraints>
+                                        <state key="normal" title="Test my Knowledge"/>
+                                        <connections>
+                                            <action selector="onClickButtonTestMyKnowledge:" destination="288-Dg-Lw8" eventType="touchUpInside" id="1qx-1z-T9v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eP0-Sh-WVL" firstAttribute="width" secondItem="dgV-Kx-3tM" secondAttribute="width" id="BFN-nu-gQk"/>
+                                    <constraint firstItem="Imd-AN-Hpp" firstAttribute="width" secondItem="dgV-Kx-3tM" secondAttribute="width" id="HRj-mW-9R7"/>
+                                    <constraint firstItem="wkG-2M-gcc" firstAttribute="width" secondItem="dgV-Kx-3tM" secondAttribute="width" id="URI-Vm-GPF"/>
+                                    <constraint firstItem="5DW-y1-skQ" firstAttribute="width" secondItem="dgV-Kx-3tM" secondAttribute="width" id="aUB-Ko-Jge"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dgV-Kx-3tM" secondAttribute="trailing" constant="10" id="eJU-Gd-ktv"/>
+                            <constraint firstItem="jhI-65-hxi" firstAttribute="top" relation="lessThanOrEqual" secondItem="dgV-Kx-3tM" secondAttribute="bottom" constant="300" id="fNM-87-gkE"/>
+                            <constraint firstItem="dgV-Kx-3tM" firstAttribute="leading" secondItem="hIB-uO-req" secondAttribute="leadingMargin" constant="10" id="ktp-Lb-RGf"/>
+                            <constraint firstItem="dgV-Kx-3tM" firstAttribute="top" secondItem="h9m-3m-LvX" secondAttribute="bottom" constant="20" id="sGy-aG-E9m"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ED0-eR-6lN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
