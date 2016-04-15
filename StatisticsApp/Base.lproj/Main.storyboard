@@ -142,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lQR-ED-Lff">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="643"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="iconCell" rowHeight="70" id="b49-DJ-E0F" customClass="IconTableViewCell" customModule="StatisticsApp" customModuleProvider="target">
@@ -153,7 +153,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-dN-PSZ">
-                                                    <rect key="frame" x="92" y="23" width="145" height="24"/>
+                                                    <rect key="frame" x="84" y="23" width="145" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="145" id="OXR-sc-M3S"/>
                                                     </constraints>
@@ -162,7 +162,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BW1-LA-uYm">
-                                                    <rect key="frame" x="8" y="16" width="44" height="37"/>
+                                                    <rect key="frame" x="0.0" y="16" width="44" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="EjZ-m6-w3j"/>
                                                         <constraint firstAttribute="width" constant="44" id="rxa-Wf-7Ym"/>
@@ -170,7 +170,7 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="BW1-LA-uYm" firstAttribute="leading" secondItem="LZh-PQ-LYo" secondAttribute="leading" constant="8" id="DLG-ak-Mhy"/>
+                                                <constraint firstItem="BW1-LA-uYm" firstAttribute="leading" secondItem="LZh-PQ-LYo" secondAttribute="leading" id="DLG-ak-Mhy"/>
                                                 <constraint firstItem="Vx3-dN-PSZ" firstAttribute="leading" secondItem="BW1-LA-uYm" secondAttribute="trailing" constant="40" id="RTG-78-lbK"/>
                                                 <constraint firstItem="BW1-LA-uYm" firstAttribute="top" secondItem="LZh-PQ-LYo" secondAttribute="top" constant="16" id="pSC-NR-8Jy"/>
                                                 <constraint firstItem="Vx3-dN-PSZ" firstAttribute="centerY" secondItem="BW1-LA-uYm" secondAttribute="centerY" id="rAo-6p-U0E"/>
@@ -190,13 +190,19 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.72188431387272556" green="0.76943614475828848" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lQR-ED-Lff" firstAttribute="leading" secondItem="thC-VP-Bxk" secondAttribute="leading" id="GpJ-Ki-rTR"/>
                             <constraint firstItem="lQR-ED-Lff" firstAttribute="bottom" secondItem="ajT-1w-lQo" secondAttribute="top" id="NLj-Ih-dal"/>
+                            <constraint firstItem="lQR-ED-Lff" firstAttribute="top" secondItem="rhB-t8-Bdh" secondAttribute="bottom" constant="-40" id="adB-g1-ZnK"/>
                             <constraint firstItem="lQR-ED-Lff" firstAttribute="centerY" secondItem="thC-VP-Bxk" secondAttribute="centerY" id="dQb-CM-c4i"/>
                             <constraint firstItem="lQR-ED-Lff" firstAttribute="centerX" secondItem="thC-VP-Bxk" secondAttribute="centerX" id="iZg-rf-VbG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dQb-CM-c4i"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zG8-A9-G8n"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -392,6 +398,6 @@
         <image name="statslogo" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OVc-CM-Jcj"/>
+        <segue reference="vdW-f7-z2B"/>
     </inferredMetricsTieBreakers>
 </document>
