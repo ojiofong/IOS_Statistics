@@ -45,7 +45,7 @@ class StatsDetailController: UIViewController {
     func showMZFormSheet(){
         let navigationController = self.storyboard!.instantiateViewControllerWithIdentifier("formsheetnavcon") as! UINavigationController
         let formSheetController = MZFormSheetPresentationViewController(contentViewController: navigationController)
-        formSheetController.presentationController?.contentViewSize = CGSizeMake(300, 350)
+        formSheetController.presentationController?.contentViewSize = CGSizeMake(getFractionOfScreenWidth(), 350)
         formSheetController.presentationController?.shouldCenterVertically = true
         formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
         
@@ -71,5 +71,18 @@ class StatsDetailController: UIViewController {
             
         }
         
+    }
+    
+    
+    /**
+     * Get a fraction of the device's screen width to maintain uniformity across screen sizes
+     * @return CGFloat
+     */
+    func getFractionOfScreenWidth()->CGFloat{
+        // get screen height and width
+        let screen = UIScreen.mainScreen().bounds
+        let screenWidth = screen.size.width
+        //        let screenHeight = screen.size.height
+        return screenWidth * 0.8 // return a fraction
     }
 }
