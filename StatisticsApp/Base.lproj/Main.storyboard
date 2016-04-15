@@ -18,20 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="Qud-Uv-xtV">
-                                <rect key="frame" x="20" y="72" width="335" height="515"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qud-Uv-xtV">
+                                <rect key="frame" x="20" y="72" width="335" height="495"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="xll-go-tAF">
-                                        <rect key="frame" x="0.0" y="73" width="335" height="369"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="xll-go-tAF">
+                                        <rect key="frame" x="0.0" y="73.5" width="335" height="348"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k6v-5k-Qzn">
-                                                <rect key="frame" x="17" y="0.0" width="300" height="167"/>
+                                                <rect key="frame" x="17.5" y="0.0" width="300" height="167"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statslogo" translatesAutoresizingMaskIntoConstraints="NO" id="6A9-yv-B9u">
-                                                        <rect key="frame" x="105" y="0.0" width="90" height="90"/>
+                                                        <rect key="frame" x="110" y="0.0" width="80" height="80"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="90" id="14S-tt-cZp"/>
-                                                            <constraint firstAttribute="height" constant="90" id="mJs-ME-rO8"/>
+                                                            <constraint firstAttribute="width" constant="80" id="14S-tt-cZp"/>
+                                                            <constraint firstAttribute="height" constant="80" id="mJs-ME-rO8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-Zw-MDv">
@@ -75,7 +75,7 @@
                                                 </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="GHX-hI-GY5">
-                                                <rect key="frame" x="9" y="234" width="317" height="135"/>
+                                                <rect key="frame" x="9" y="213" width="317" height="135"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics is how we analyze, present and organize data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="326" translatesAutoresizingMaskIntoConstraints="NO" id="CBt-WP-Ki7">
                                                         <rect key="frame" x="0.0" y="0.0" width="317" height="41"/>
@@ -103,7 +103,7 @@
                         <constraints>
                             <constraint firstItem="Qud-Uv-xtV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="1eU-eh-Qg2"/>
                             <constraint firstAttribute="trailing" secondItem="Qud-Uv-xtV" secondAttribute="trailing" constant="20" symbolic="YES" id="4d4-qf-Hdi"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="lessThanOrEqual" secondItem="Qud-Uv-xtV" secondAttribute="bottom" constant="80" id="5Qh-4O-L9a"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="lessThanOrEqual" secondItem="Qud-Uv-xtV" secondAttribute="bottom" constant="100" id="5Qh-4O-L9a"/>
                             <constraint firstItem="Qud-Uv-xtV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="61f-tP-jp2"/>
                             <constraint firstItem="Qud-Uv-xtV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="AP6-5q-pRE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qud-Uv-xtV" secondAttribute="trailing" constant="9" id="Blu-ua-iVr"/>
