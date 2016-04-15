@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         setViewControllerTitle(Const.APP_NAME)
-        hideUnwantedView()
+       // hideUnwantedView()
         customizeNavBar();
         
         let i : Int = Int(Sigma.median([3,2,1,4,5])!)
