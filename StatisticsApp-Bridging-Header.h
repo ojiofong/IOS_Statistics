@@ -10,4 +10,5 @@
 #define StatisticsApp_Bridging_Header_h
 #endif /* StatisticsApp_Bridging_Header_h */
 
+#import <UIKit/UIView.h>
 #import "MZFormSheetPresentationViewController.h"
