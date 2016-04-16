@@ -181,8 +181,10 @@ class QuizController : UIViewController, UITextFieldDelegate{
     }
     
     func hideViewForCorrectOrWrongAnswer(shouldHide:Bool){
-        benCheckBox.hideBox = shouldHide
-        labelRightOrWrong.hidden = shouldHide
+        benCheckBox.hideBox = shouldHide // hide
+        benCheckBox.onCheckColor = UIColor.whiteColor() //Hides this if tapped
+        labelRightOrWrong.hidden = shouldHide // hide label beside
+        benCheckBox.userInteractionEnabled = false // disable onInit
     }
     
     func roundToDecimalPlaces(value:Double, places:Int) -> Double {

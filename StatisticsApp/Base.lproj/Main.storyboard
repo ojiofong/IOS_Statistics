@@ -327,6 +327,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="jxu-Qa-4zA" firstAttribute="width" secondItem="lNl-ze-uyV" secondAttribute="width" id="NN2-cm-Prc"/>
                                     <constraint firstItem="iKI-qX-yr0" firstAttribute="width" secondItem="lNl-ze-uyV" secondAttribute="width" id="Vga-v5-4Ah"/>
