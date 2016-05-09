@@ -48,6 +48,7 @@ class StatsDetailController: UIViewController {
         formSheetController.presentationController?.contentViewSize = CGSizeMake(getFractionOfScreenWidth(), 350)
         formSheetController.presentationController?.shouldCenterVertically = true
         formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
+        formSheetController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyle.DropDown
         
         // Pass data
         let presentedViewController = navigationController.viewControllers.first as! QuizController
