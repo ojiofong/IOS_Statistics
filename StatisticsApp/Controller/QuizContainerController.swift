@@ -61,19 +61,10 @@ class QuizContainerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = textTitle
         arr = generateRandomArrayOfNumbers()
         labelQuestion.text = textQuestion + textTitle
         labelData.text = String(arr)
-        hideViewForCorrectOrWrongAnswer(true)
-        customizeNavigationBar()
-    }
-    
-    func customizeNavigationBar(){
-        // Remove nav bar bottom border
-        navigationController?.navigationBar.shadowImage = UIImage();
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-    }
+        hideViewForCorrectOrWrongAnswer(true)    }
     
     // Called whenever user clicks outside on main view
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
