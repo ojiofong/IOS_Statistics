@@ -378,6 +378,10 @@
         <scene sceneID="3g1-Hn-2F0">
             <objects>
                 <viewController id="GDP-SR-ck0" customClass="QuizContainerController" customModule="StatisticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wAO-Sg-dxm"/>
+                        <viewControllerLayoutGuide type="bottom" id="oRv-4j-MlP"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dnO-eV-WAT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -478,9 +482,9 @@
                                 </variation>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCz-zQ-HHw">
-                                <rect key="frame" x="333" y="563" width="32" height="30"/>
+                                <rect key="frame" x="326" y="563" width="39" height="30"/>
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="Reset">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
