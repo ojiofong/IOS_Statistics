@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatsDetailController: UIViewController {
+class StatsDetailController: UIViewController, QuizListener {
     
     var textTitle = "Default text value"
     var textDescription = "Default text value"
@@ -18,6 +18,15 @@ class StatsDetailController: UIViewController {
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelExample: UILabel!
     @IBOutlet weak var buttonTestKnowledge: UIButton!
+    
+    
+    /**
+     * Implemented QuizListener method
+     * Detects event from another viewController
+     */
+    func onSelectNext() {
+        showMZFormSheet()
+    }
     
     override func viewWillAppear(animated: Bool) {
         initViews()
@@ -53,6 +62,9 @@ class StatsDetailController: UIViewController {
         // Pass data
         let presentedViewController = navigationController.viewControllers.first as! QuizController
         presentedViewController.textTitle = self.textTitle
+        
+        // conform to protocol
+        presentedViewController.delegate = self
         
         self.presentViewController(formSheetController, animated: true, completion: nil)
     }

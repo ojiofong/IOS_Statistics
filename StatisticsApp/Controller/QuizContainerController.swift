@@ -32,8 +32,8 @@ class QuizContainerController: UIViewController {
     
     @IBAction func buttonTapNext(sender: AnyObject) {
         print("submit inside")
+        self.dismissViewControllerAnimated(true, completion: nil)
         delegate?.onTapNextQuiz()
-        //self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     @IBAction func buttonPressedSubmit(sender: AnyObject) {
