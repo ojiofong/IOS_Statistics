@@ -38,6 +38,7 @@
 		376064FE1C6E45E800EF1A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376064FC1C6E45E800EF1A31 /* Main.storyboard */; };
 		376065001C6E45E800EF1A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376064FF1C6E45E800EF1A31 /* Assets.xcassets */; };
 		376065031C6E45E800EF1A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376065011C6E45E800EF1A31 /* LaunchScreen.storyboard */; };
+		378936FC1CE166D5000A810D /* QuizContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378936FB1CE166D5000A810D /* QuizContainerController.swift */; };
 		37BD67F71CB8040200ABA5D6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD67F61CB8040200ABA5D6 /* Const.swift */; };
 		4E650F7AA32555C1C44EBA08 /* Pods_StatisticsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22BEF7582212392D7E35B19 /* Pods_StatisticsApp.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		376064FF1C6E45E800EF1A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		376065021C6E45E800EF1A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		376065041C6E45E800EF1A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		378936FB1CE166D5000A810D /* QuizContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizContainerController.swift; sourceTree = "<group>"; };
 		37B6F7CB1C94BA2900FB155C /* StatisticsApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StatisticsApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		37BD67F61CB8040200ABA5D6 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		37DC87BB1C949630003BE7CD /* MZAppearance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MZAppearance.framework; path = Carthage/Build/iOS/MZAppearance.framework; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				373A17BB1C95F8C7004175F2 /* SecondViewController.swift */,
 				373A17BC1C95F8C7004175F2 /* StatsDetailController.swift */,
 				373A17BE1C95F8C7004175F2 /* ViewController.swift */,
+				378936FB1CE166D5000A810D /* QuizContainerController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				370D43021CAB117A003D93C5 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m in Sources */,
 				370D43061CAB117A003D93C5 /* UIViewController+TargetViewController.m in Sources */,
 				370D42F71CAB117A003D93C5 /* JLToast.swift in Sources */,
+				378936FC1CE166D5000A810D /* QuizContainerController.swift in Sources */,
 				373A17C01C95F8C7004175F2 /* QuizController.swift in Sources */,
 				37BD67F71CB8040200ABA5D6 /* Const.swift in Sources */,
 				373A17B21C95F7C9004175F2 /* test.swift in Sources */,
